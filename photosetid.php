@@ -12,7 +12,8 @@ if(!isset($_POST["title"]) || $_POST["title"]==""){
 $result = array();
 
 $f = new phpFlickr("693af055013e44885afe5cce4468e6f2");
-$f->enableCache("db", "mysql://root:pass@localhost/flickr", 60*60*24);
+//$f->enableCache("db", "mysql://root:pass@localhost/flickr", 60*60*24);
+$f->enableCache("fs", "cache");
 
 //$f->setToken("72157650742359347-5cdf8a04fa2c5d43");
 
